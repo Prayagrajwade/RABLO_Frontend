@@ -15,7 +15,7 @@ const CreateProduct = () => {
     const token = localStorage.getItem("token"); // Get token from localStorage
     try {
       await axios.post(
-        "http://localhost:4002/api/products/createProduct",
+        "https://rablo-backend-dq27.onrender.com/api/products/createProduct",
         {
           productId,
           name,

@@ -8,7 +8,7 @@ const ProductList = () => {
 
   const fetchProducts = async () => {
     const token = localStorage.getItem("token");
-    const res = await axios.get("http://localhost:4002/api/products", {
+    const res = await axios.get("https://rablo-backend-dq27.onrender.com/api/products", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -19,7 +19,7 @@ const ProductList = () => {
   const deleteProduct = async (id) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:4002/api/products/${id}`, {
+      await axios.delete(`https://rablo-backend-dq27.onrender.com/api/products/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

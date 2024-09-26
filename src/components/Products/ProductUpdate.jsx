@@ -19,7 +19,7 @@ const ProductUpdate = () => {
       const token = localStorage.getItem("token"); // Get token from localStorage
       try {
         const res = await axios.get(
-          `http://localhost:4002/api/products/productByid/${id}`,
+          `https://rablo-backend-dq27.onrender.com/api/products/productByid/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`, // Add Authorization header
@@ -49,7 +49,7 @@ const ProductUpdate = () => {
     e.preventDefault();
     const token = localStorage.getItem("token"); // Ensure the token is correct
     try {
-      await axios.put(`http://localhost:4002/api/products/${id}`, product, {
+      await axios.put(`https://rablo-backend-dq27.onrender.com/api/products/${id}`, product, {
         headers: {
           Authorization: `Bearer ${token}`, // Correct Authorization header
         },
